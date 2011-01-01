@@ -97,7 +97,6 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
 color jellybeans+
 
 " Include user's local vim config
@@ -115,3 +114,11 @@ map <C-l> <C-W>l
 " set leader char
 let mapleader = ","
 
+" run cucumber features in screen
+augroup Cucumber
+  au!
+  autocmd BufNewFile,BufReadPost,BufEnter *.feature
+    \ set filetype=cucumber|
+    \ :nmap <leader>r :call Send_to_Screen("bundle exec cucumber -t @r" . "\n")<CR>|
+    \ :nmap <leader>R :call Send_to_Screen("bundle exec cucumber -p s -t @r" . "\n")<CR>|
+augroup END
