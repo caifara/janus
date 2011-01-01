@@ -197,11 +197,11 @@ vim_plugin_task "mustasche" do
 end
 
 vim_plugin_task "citrus" do
-  sh "curl https://github.com/mjijackson/citrus/raw/master/extras/vim/syntax/citrus.vim > syntax/citrus.vim_plugin_task"
+  sh "curl https://github.com/mjijackson/citrus/raw/master/extras/vim/syntax/citrus.vim > syntax/citrus.vim"
 end
 
 vim_plugin_task "slime" do
-  sh "curl https://github.com/jpalardy/dotfiles/raw/master/vim/plugin/slime.vim > plugin/slime.vim_plugin_task"
+  sh "curl https://github.com/jpalardy/dotfiles/raw/master/vim/plugin/slime.vim > plugin/slime.vim"
 end
 
 desc "Update the documentation"
