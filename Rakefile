@@ -196,6 +196,11 @@ end
 vim_plugin_task "citrus" do
   sh "curl https://github.com/mjijackson/citrus/raw/master/extras/vim/syntax/citrus.vim > syntax/citrus.vim_plugin_task"
 end
+
+vim_plugin_task "slime" do
+  sh "curl https://github.com/jpalardy/dotfiles/raw/master/vim/plugin/slime.vim > plugin/slime.vim_plugin_task"
+end
+
 desc "Cleanup all the files"
 task :clean do
   rm_rf "tmp"
