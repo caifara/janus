@@ -193,6 +193,9 @@ vim_plugin_task "mustasche" do
   sh "curl http://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
 end
 
+vim_plugin_task "citrus" do
+  sh "curl https://github.com/mjijackson/citrus/raw/master/extras/vim/syntax/citrus.vim > syntax/citrus.vim_plugin_task"
+end
 desc "Cleanup all the files"
 task :clean do
   rm_rf "tmp"
