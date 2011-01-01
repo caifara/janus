@@ -8,6 +8,7 @@ syntax on
 set nowrap
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
@@ -24,6 +25,11 @@ set wildignore+=*.o,*.obj,.git,*.rbc
 " Status bar
 set laststatus=2
 
+" Without setting this, ZoomWin restores windows in a way that causes
+" equalalways behavior to be triggered the next time CommandT is used.
+" This is likely a bludgeon to solve some other issue, but it works
+set noequalalways
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -32,7 +38,7 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:CommandTMaxHeight=20
 
 " ZoomWin configuration
-map <Leader>z :ZoomWin<CR>
+map <Leader><Leader> :ZoomWin<CR>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
@@ -104,13 +110,18 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" My changes
+"Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
 " Move to other windows in split window mode
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-j> <C-W>j
 map <C-l> <C-W>l
 
+" xterm not recognized right by vim
+set term=builtin_ansi
 " set leader char
 let mapleader = ","
 
