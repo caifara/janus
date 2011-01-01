@@ -112,3 +112,6 @@ map <C-l> <C-W>l
 map <C-j> <C-W>j
 map <C-l> <C-W>l
 
+" set leader char
+let mapleader = ","
+
