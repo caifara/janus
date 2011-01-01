@@ -104,3 +104,11 @@ color jellybeans+
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" My changes
+" Move to other windows in split window mode
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+map <C-j> <C-W>j
+map <C-l> <C-W>l
+
