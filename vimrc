@@ -133,3 +133,6 @@ augroup Cucumber
     \ :nmap <leader>r :call Send_to_Screen("bundle exec cucumber -t @r" . "\n")<CR>|
     \ :nmap <leader>R :call Send_to_Screen("bundle exec cucumber -p s -t @r" . "\n")<CR>|
 augroup END
+
+" command-enter to insert a line under cursor in edit mode (textmate alike)
+map! <D-Enter> <Esc>o
