@@ -105,11 +105,6 @@ set modelines=10
 " Default color scheme
 color jellybeans+
 
-" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
-
 "Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -136,3 +131,8 @@ augroup END
 
 " command-enter to insert a line under cursor in edit mode (textmate alike)
 map! <D-Enter> <Esc>o
+
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
