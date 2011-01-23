@@ -78,6 +78,9 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+" set leader char
+let mapleader = ","
+
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -117,8 +120,8 @@ map <C-l> <C-W>l
 
 " xterm not recognized right by vim
 set term=builtin_ansi
-" set leader char
-let mapleader = ","
+
+let g:slime={"sessionname": "slime", "windowname": "w0"}
 
 " run cucumber features in screen
 augroup Cucumber
