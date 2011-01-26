@@ -149,6 +149,7 @@ vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim
 vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
 vim_plugin_task "tail bundle",      "http://www.vim.org/scripts/download_script.php?src_id=7685"
 vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.php?src_id=14615"
+vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
