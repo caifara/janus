@@ -30,6 +30,9 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
+" set leader char
+let mapleader = ","
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -77,9 +80,6 @@ set backspace=indent,eol,start
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
-
-" set leader char
-let mapleader = ","
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
