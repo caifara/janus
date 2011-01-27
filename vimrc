@@ -116,7 +116,7 @@ set directory=~/.vim/backup
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-j> <C-W>j
-map <C-l> <C-W>l
+map <C-k> <C-W>k
 
 " xterm not recognized right by vim
 set term=builtin_ansi
@@ -134,6 +134,9 @@ augroup END
 
 " command-enter to insert a line under cursor in edit mode (textmate alike)
 map! <D-Enter> <Esc>o
+
+" specky
+let g:speckySpecSwitcherKey  = "<C-a>"
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
