@@ -207,6 +207,10 @@ vim_plugin_task "slime" do
   sh "curl https://gist.github.com/raw/792477/dde1e1849c344db6070fd1a6cd46cf1107de7e51/slime.vim > plugin/slime.vim"
 end
 
+vim_plugin_task "simplefold" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=7003 > plugin/SimpleFold.vim"
+end
+
 desc "Update the documentation"
 task :update_docs do
   puts "Updating VIM Documentation..."
