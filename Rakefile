@@ -155,7 +155,6 @@ vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
 vim_plugin_task "tail bundle",      "http://www.vim.org/scripts/download_script.php?src_id=7685"
 vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.php?src_id=14615"
 vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
-vim_plugin_task "pastie",           "http://www.vim.org/scripts/download_script.php?src_id=10260"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -227,6 +226,10 @@ end
 
 vim_plugin_task "simplefold" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=7003 > plugin/SimpleFold.vim"
+end
+
+vim_plugin_task "pastie" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=10260 > plugin/pastie.vim"
 end
 
 desc "Update the documentation"
