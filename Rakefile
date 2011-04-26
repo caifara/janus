@@ -228,8 +228,8 @@ vim_plugin_task "simplefold" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=7003 > plugin/SimpleFold.vim"
 end
 
-vim_plugin_task "pastie" do
-  sh "curl http://www.vim.org/scripts/download_script.php?src_id=10260 > plugin/pastie.vim"
+vim_plugin_task "gist" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=14679 > plugin/gist.vim"
 end
 
 desc "Update the documentation"
