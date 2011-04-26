@@ -93,7 +93,7 @@ def vim_plugin_task(name, repo=nil)
           else
             subdirs.each do |subdir|
               if File.exists?(subdir)
-                sh "cp -rf #{subdir}/* #{cwd}/#{subdir}/"
+                sh "cp -RfL #{subdir}/* #{cwd}/#{subdir}/"
               end
             end
           end
@@ -135,6 +135,7 @@ vim_plugin_task "nerdcommenter",    "git://github.com/ddollar/nerdcommenter.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
 vim_plugin_task "taglist",          "git://github.com/vim-scripts/taglist.vim.git"
 vim_plugin_task "vividchalk",       "git://github.com/tpope/vim-vividchalk.git"
+vim_plugin_task "solarized",        "git://github.com/altercation/vim-colors-solarized.git"
 vim_plugin_task "supertab",         "git://github.com/ervandew/supertab.git"
 vim_plugin_task "cucumber",         "git://github.com/tpope/vim-cucumber.git"
 vim_plugin_task "textile",          "git://github.com/timcharper/textile.vim.git"
@@ -152,6 +153,7 @@ vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.g
 vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
 vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
+vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 vim_plugin_task "tail bundle",      "http://www.vim.org/scripts/download_script.php?src_id=7685"
 vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.php?src_id=14615"
 vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
@@ -228,8 +230,9 @@ vim_plugin_task "simplefold" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=7003 > plugin/SimpleFold.vim"
 end
 
-vim_plugin_task "gist" do
-  sh "curl http://www.vim.org/scripts/download_script.php?src_id=14679 > plugin/gist.vim"
+if File.exists?(janus = File.expand_path("~/.janus.rake"))
+  puts "Loading your custom rake file"
+  import(janus)
 end
 
 desc "Update the documentation"
