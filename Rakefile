@@ -157,6 +157,7 @@ vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 vim_plugin_task "tail bundle",      "http://www.vim.org/scripts/download_script.php?src_id=7685"
 vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.php?src_id=14615"
 vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
+vim_plugin_task "colorsel",         "http://www.vim.org/scripts/download_script.php?src_id=15488"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
