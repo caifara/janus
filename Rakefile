@@ -156,7 +156,6 @@ vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 vim_plugin_task "tail bundle",      "http://www.vim.org/scripts/download_script.php?src_id=7685"
 vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.php?src_id=14615"
 vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
-vim_plugin_task "colorsel",         "http://www.vim.org/scripts/download_script.php?src_id=15488"
 
 vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
   sh "gem install github-markup redcarpet"
@@ -231,6 +230,10 @@ end
 
 vim_plugin_task "simplefold" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=7003 > plugin/SimpleFold.vim"
+end
+
+vim_plugin_task "colorHex" do
+  sh "curl http://2manyvariables.inmachina.com/static/colorx.vim > plugin/colorx.vim"
 end
 
 if File.exists?(janus = File.expand_path("~/.janus.rake"))
