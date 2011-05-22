@@ -162,7 +162,7 @@ vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.
 vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
 
 vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
-  sh "gem install github-markup redcarpet"
+  sh "sudo gem install github-markup redcarpet --no-ri --no-rdoc"
 end
 
 vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
