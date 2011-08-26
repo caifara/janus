@@ -132,7 +132,6 @@ vim_plugin_task "git",              "git://github.com/tpope/vim-git.git"
 vim_plugin_task "haml",             "git://github.com/tpope/vim-haml.git"
 vim_plugin_task "indent_object",    "git://github.com/michaeljsmith/vim-indent-object.git"
 vim_plugin_task "javascript",       "git://github.com/pangloss/vim-javascript.git"
-vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "nerdtree",         "git://github.com/wycats/nerdtree.git"
 vim_plugin_task "nerdcommenter",    "git://github.com/ddollar/nerdcommenter.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
@@ -161,9 +160,9 @@ vim_plugin_task "tail bundle",      "http://www.vim.org/scripts/download_script.
 vim_plugin_task "specky",           "http://www.vim.org/scripts/download_script.php?src_id=14615"
 vim_plugin_task "autoclose",        "git://github.com/vim-scripts/AutoClose.git"
 
-vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
-  sh "sudo gem install github-markup redcarpet --no-ri --no-rdoc"
-end
+#vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
+#  sh "gem install github-markup redcarpet"
+#end
 
 vim_plugin_task "command_t",        "http://s3.wincent.com/command-t/releases/command-t-1.2.1.vba" do
   Dir.chdir "ruby/command-t" do
@@ -207,10 +206,10 @@ vim_plugin_task "janus_themes" do
 end
 
 vim_plugin_task "molokai" do
-  sh "curl https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim > colors/molokai.vim"
+  sh "curl https://raw.github.com/mrtazz/molokai.vim/master/colors/molokai.vim > colors/molokai.vim"
 end
 vim_plugin_task "mustache" do
-  sh "curl https://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
+  sh "curl https://raw.github.com/defunkt/mustache/master/contrib/mustache.vim > syntax/mustache.vim"
   File.open(File.expand_path('../ftdetect/mustache.vim', __FILE__), 'w') do |file|
     file << "au BufNewFile,BufRead *.mustache        setf mustache"
   end
@@ -221,11 +220,11 @@ vim_plugin_task "arduino","git://github.com/vim-scripts/Arduino-syntax-file.git"
   end
 end
 vim_plugin_task "vwilight" do
-  sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
+  sh "curl https://raw.github.com/gist/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087 > colors/vwilight.vim"
 end
 
 vim_plugin_task "citrus" do
-  sh "curl https://github.com/mjijackson/citrus/raw/master/extras/vim/syntax/citrus.vim > syntax/citrus.vim"
+  sh "curl https://raw.github.com/mjijackson/citrus/raw/master/extras/vim/syntax/citrus.vim > syntax/citrus.vim"
 end
 
 vim_plugin_task "slime" do
