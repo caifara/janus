@@ -228,7 +228,7 @@ vim_plugin_task "citrus" do
 end
 
 vim_plugin_task "slime" do
-  sh "curl https://gist.github.com/raw/792477/dde1e1849c344db6070fd1a6cd46cf1107de7e51/slime.vim > plugin/slime.vim"
+  sh "curl https://raw.github.com/gist/792477/dde1e1849c344db6070fd1a6cd46cf1107de7e51/slime.vim > plugin/slime.vim"
 end
 
 vim_plugin_task "simplefold" do
